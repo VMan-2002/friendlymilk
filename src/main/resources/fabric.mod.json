@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "friendlymilk",
+	"version": "${version}",
+	"name": "FriendlyMilk",
+	"description": "Calm down, there's enough milk for everyone!",
+	"authors": [
+		"VMan_2002"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/friendlymilk/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.vman2002.milk.FriendlyMilk"
+		],
+		"client": [
+			"com.vman2002.milk.FriendlyMilkClient"
+		]
+	},
+	"mixins": [
+		"friendlymilk.mixins.json",
+		{
+			"config": "friendlymilk.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
